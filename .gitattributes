@@ -1,0 +1,8 @@
+# Consistent line endings
+* text=auto eol=crlf
+
+# Hide build scripts, tooling, and test harnesses from language stats
+tools/* linguist-vendored
+tests/* linguist-vendored
+docs/* linguist-documentation
+assets/* linguist-vendored

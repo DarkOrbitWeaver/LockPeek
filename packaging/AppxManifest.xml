@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4" xmlns:desktop5="http://schemas.microsoft.com/appx/manifest/desktop/windows10/5" xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap5 uap desktop4 desktop5 com rescap">
+ <Identity Name="LockPeek.Development" Publisher="CN=LockPeek.Development" Version="0.4.23.0" ProcessorArchitecture="x64"/>
+ <Properties><DisplayName>LockPeek</DisplayName><PublisherDisplayName>LockPeek development build</PublisherDisplayName><Logo>assets\msix\StoreLogo.png</Logo><Description>Find apps Windows identifies as using selected files.</Description></Properties>
+ <Dependencies><TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22000.0" MaxVersionTested="10.0.26100.0"/></Dependencies>
+ <Resources><Resource Language="en-us"/></Resources>
+ <Applications><Application Id="App" Executable="LockPeek.exe" EntryPoint="Windows.FullTrustApplication">
+  <uap:VisualElements DisplayName="LockPeek" Description="Find apps using your files" BackgroundColor="transparent" Square150x150Logo="assets\msix\Square150x150Logo.png" Square44x44Logo="assets\msix\Square44x44Logo.png"/>
+  <Extensions>
+   <uap5:Extension Category="windows.appExecutionAlias" Executable="LockPeek.exe" EntryPoint="Windows.FullTrustApplication"><uap5:AppExecutionAlias><uap5:ExecutionAlias Alias="LockPeek.exe"/></uap5:AppExecutionAlias></uap5:Extension>
+   <com:Extension Category="windows.comServer"><com:ComServer><com:SurrogateServer DisplayName="LockPeek Explorer command"><com:Class Id="70C8261E-55F0-41D8-B8D0-6E22B075323A" Path="LockPeek.Shell.dll" ThreadingModel="STA"/><com:Class Id="70C8261F-55F0-41D8-B8D0-6E22B075323A" Path="LockPeek.Shell.dll" ThreadingModel="STA"/></com:SurrogateServer></com:ComServer></com:Extension>
+   <desktop4:Extension Category="windows.fileExplorerContextMenus"><desktop4:FileExplorerContextMenus><desktop5:ItemType Type="*"><desktop5:Verb Id="LockPeekInspect" Clsid="70C8261E-55F0-41D8-B8D0-6E22B075323A"/><desktop5:Verb Id="LockPeekRecycle" Clsid="70C8261F-55F0-41D8-B8D0-6E22B075323A"/></desktop5:ItemType><desktop5:ItemType Type="Directory"><desktop5:Verb Id="LockPeekInspect" Clsid="70C8261E-55F0-41D8-B8D0-6E22B075323A"/><desktop5:Verb Id="LockPeekRecycle" Clsid="70C8261F-55F0-41D8-B8D0-6E22B075323A"/></desktop5:ItemType></desktop4:FileExplorerContextMenus></desktop4:Extension>
+  </Extensions>
+ </Application></Applications>
+ <Capabilities><rescap:Capability Name="runFullTrust"/></Capabilities>
+</Package>

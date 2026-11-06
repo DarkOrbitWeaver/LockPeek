@@ -1,0 +1,32 @@
+## Build and output directories
+**/bin/
+**/obj/
+artifacts/
+.vs/
+.idea/
+**/node_modules/
+tools/toolchain/
+
+## User-specific and environment files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.env
+.env.*
+
+## Certificates, keys and packages
+*.pfx
+*.p12
+*.pem
+*.key
+*.snk
+*.cer
+*.msix
+*.msixbundle
+*.appx
+*.appxbundle
+
+## Logs and diagnostics
+*.log
+*.tlog

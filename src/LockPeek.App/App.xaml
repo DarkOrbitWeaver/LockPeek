@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="LockPeek.App.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="DestructiveTextBrush" Color="#C42B1C"/>
+                    <SolidColorBrush x:Key="SuccessTextBrush" Color="#0F7B0F"/>
+                    <SolidColorBrush x:Key="WarningBadgeBrush" Color="#FFF4CE"/>
+                    <SolidColorBrush x:Key="WarningTextBrush" Color="#5C4400"/>
+                    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="#0F6CBD"/>
+                    <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="#115EA3"/>
+                    <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="#0C3B5E"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorPrimaryBrush" Color="#0F6CBD"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorSecondaryBrush" Color="#115EA3"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="#0C3B5E"/>
+                    <SolidColorBrush x:Key="BrandAccentBrush" Color="#0F6CBD"/>
+                    <SolidColorBrush x:Key="AccentButtonBackground" Color="#0F6CBD"/>
+                    <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="#115EA3"/>
+                    <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="#0C3B5E"/>
+                    <SolidColorBrush x:Key="AccentButtonForeground" Color="White"/>
+                    <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="White"/>
+                    <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="White"/>
+                    <SolidColorBrush x:Key="WindowBrush" Color="#F3F3F3"/>
+                    <SolidColorBrush x:Key="CardBrush" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="LineBrush" Color="#E0E0E0"/>
+                    <SolidColorBrush x:Key="MutedBrush" Color="#5C5C5C"/>
+                    <SolidColorBrush x:Key="BrandInk" Color="#2B2B2B"/>
+                    <Color x:Key="SystemAccentColor">#0F6CBD</Color>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="Default">
+                    <SolidColorBrush x:Key="DestructiveTextBrush" Color="#FF99A4"/>
+                    <SolidColorBrush x:Key="SuccessTextBrush" Color="#9FE0A8"/>
+                    <SolidColorBrush x:Key="WarningBadgeBrush" Color="#55472C"/>
+                    <SolidColorBrush x:Key="WarningTextBrush" Color="#FFD980"/>
+                    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="#4CC2FF"/>
+                    <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="#60CDFF"/>
+                    <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="#3EA6DD"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorPrimaryBrush" Color="#4CC2FF"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorSecondaryBrush" Color="#60CDFF"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="#3EA6DD"/>
+                    <SolidColorBrush x:Key="BrandAccentBrush" Color="#4CC2FF"/>
+                    <SolidColorBrush x:Key="AccentButtonBackground" Color="#4CC2FF"/>
+                    <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="#60CDFF"/>
+                    <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="#3EA6DD"/>
+                    <SolidColorBrush x:Key="AccentButtonForeground" Color="Black"/>
+                    <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="Black"/>
+                    <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="Black"/>
+                    <SolidColorBrush x:Key="WindowBrush" Color="#202020"/>
+                    <SolidColorBrush x:Key="CardBrush" Color="#2B2B2B"/>
+                    <SolidColorBrush x:Key="LineBrush" Color="#3A3A3A"/>
+                    <SolidColorBrush x:Key="MutedBrush" Color="#C5C5C5"/>
+                    <SolidColorBrush x:Key="BrandInk" Color="White"/>
+                    <Color x:Key="SystemAccentColor">#4CC2FF</Color>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <SolidColorBrush x:Key="DestructiveTextBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+                    <SolidColorBrush x:Key="SuccessTextBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+                    <SolidColorBrush x:Key="WarningBadgeBrush" Color="{ThemeResource SystemColorWindowColor}"/>
+                    <SolidColorBrush x:Key="WarningTextBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+                    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorPrimaryBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorSecondaryBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="BrandAccentBrush" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentButtonBackground" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="{ThemeResource SystemColorHighlightColor}"/>
+                    <SolidColorBrush x:Key="AccentButtonForeground" Color="{ThemeResource SystemColorHighlightTextColor}"/>
+                    <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="{ThemeResource SystemColorHighlightTextColor}"/>
+                    <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="{ThemeResource SystemColorHighlightTextColor}"/>
+                    <SolidColorBrush x:Key="WindowBrush" Color="{ThemeResource SystemColorWindowColor}"/>
+                    <SolidColorBrush x:Key="CardBrush" Color="{ThemeResource SystemColorWindowColor}"/>
+                    <SolidColorBrush x:Key="LineBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+                    <SolidColorBrush x:Key="MutedBrush" Color="{ThemeResource SystemColorWindowTextColor}"/>
+                    <SolidColorBrush x:Key="BrandInk" Color="{ThemeResource SystemColorWindowTextColor}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

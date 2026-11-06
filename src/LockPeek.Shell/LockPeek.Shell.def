@@ -1,0 +1,4 @@
+LIBRARY LockPeek.Shell
+EXPORTS
+ DllGetClassObject
+ DllCanUnloadNow
