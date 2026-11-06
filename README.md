@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/media/lockpeek-guide.png" alt="LockPeek â€” find the apps using your files" width="100%">
+  <img src="docs/media/lockpeek-guide.png" alt="LockPeek Ã¢â‚¬â€ find the apps using your files" width="100%">
 </p>
 
 <p align="center">
@@ -37,9 +37,6 @@ Run from PowerShell or Command Prompt:
 winget install DarkOrbitWeaver.LockPeek
 ```
 
-### Option 3: Direct Download (GitHub Releases)
-Grab the installer from [GitHub Releases](https://github.com/DarkOrbitWeaver/LockPeek/releases):
-* **`LockPeek-Setup.exe`:** Standard installer with desktop shortcut and uninstaller.
 
 
 ## How to Use

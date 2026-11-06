@@ -19,9 +19,13 @@ ArchitecturesAllowed=x64compatible
 MinVersion=10.0.22000
 PrivilegesRequired=lowest
 WizardStyle=modern
+CloseApplications=yes
 
 [Files]
 Source: "..\artifacts\portable\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "..\artifacts\native\LockPeek.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\artifacts\LockPeek-sparse.msix"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\assets\context-menu\*.ico"; DestDir: "{app}\assets\context-menu"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\LockPeek"; Filename: "{app}\LockPeek.exe"
@@ -32,4 +36,8 @@ Name: "{autodesktop}\LockPeek"; Filename: "{app}\LockPeek.exe"; Tasks: desktopic
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional shortcuts:"
 
 [Run]
+Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -Command ""Add-AppxPackage -Path '{app}\LockPeek-sparse.msix' -ExternalLocation '{app}'"""; StatusMsg: "Registering Explorer context menu..."; Flags: runhidden waituntilterminated
 Filename: "{app}\LockPeek.exe"; Description: "Launch LockPeek"; Flags: nowait postinstall skipifsilent
+
+[UninstallRun]
+Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -Command ""Get-AppxPackage -Name 'LockPeek.Desktop' | Remove-AppxPackage"""; RunOnceId: "RemoveSparse"; Flags: runhidden waituntilterminated
