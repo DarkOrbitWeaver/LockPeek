@@ -43,9 +43,10 @@ winget install DarkOrbitWeaver.LockPeek
 
 1. Right-click any file, folder, or multi-selection in File Explorer.
 2. Select **Find apps using this file** (or **this folder** / **these items**).
-3. Review the detected applications with real-time scan progress.
-4. Choose **Close normally** to request a graceful shutdown, or **Force end** for background daemons or frozen apps.
-5. You can also drag and drop files directly into the LockPeek window.
+3. Review the detected applications and select the ones you want to close. If **What couldn't be checked** appears, expand it to see the scan's coverage limits.
+4. Choose **Close normally** to ask selected eligible apps to close. Save your work before using **Force end**, which stops selected eligible apps immediately.
+
+You can also drag and drop files directly into the LockPeek window.
 
 ## Key Features
 
